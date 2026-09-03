@@ -161,7 +161,7 @@ scanf("%d\n", &n);中的'\n'会吃掉连续多个空白符，而getchar()只会�
     char huiwen[10086];\
     while(scanf("%s",&huiwen)!=EOF)\
     { \
-      int k=strlen(huiwen);\      
+      int k=strlen(huiwen);\ 
     }\
 逐行读入直到碰到EOF
 
@@ -171,7 +171,7 @@ scanf("%d\n", &n);中的'\n'会吃掉连续多个空白符，而getchar()只会�
     { \
       int k=strlen(huiwen);\
       if(huiwen[k-1]=='\n') k=k-1;\
-      if(huiwen[k-1]=='\r') k=k-1;\      
+      if(huiwen[k-1]=='\r') k=k-1;\  
     }\
 注意：\
 fgets()如果读到文件末尾直接返回NULL（数值0），而不是EOF（数值-1），所以循环条件里可以直接嵌入。\
