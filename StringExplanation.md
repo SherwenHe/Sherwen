@@ -161,7 +161,7 @@ scanf("%d\n", &n);中的'\n'会吃掉连续多个空白符，而getchar()只会�
     char huiwen[10086];\
     while(scanf("%s",&huiwen)!=EOF)\
     { \
-      int k=strlen(huiwen);\ 
+    &emsp int k=strlen(huiwen);\ 
     }\
 逐行读入直到碰到EOF
 
