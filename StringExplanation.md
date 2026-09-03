@@ -131,13 +131,13 @@ a.使用 scanf();\
 b.使用 fgets();\
     scanf("%d\n",&K); 注意后面的“\n”\
     while (K--){\
-        char str[1005];\
-        int top=-1;\
-        fgets(str,sizeof(str), stdin); \
-        int len=strlen(str);\
-        for (int i=0;i<len;i++){\
-            if(str[i] == '\n' || str[i] == '\r') break;\
-            }\
+    &emsp;char str[1005];\
+    &emsp;int top=-1;\
+    &emsp;fgets(str,sizeof(str), stdin); \
+    &emsp;int len=strlen(str);\
+    &emsp;for (int i=0;i<len;i++){\
+    &emsp;if(str[i] == '\n' || str[i] == '\r') break;\
+    &emsp;}\
     }
     
 请注意：\
@@ -168,10 +168,10 @@ scanf("%d\n", &n);中的'\n'会吃掉连续多个空白符，而getchar()只会�
 如果用fgets()\
     char huiwen[10006];\
     while(fgets(huiwen,sizeof(huiwen),stdin))\
-    { \
-      int k=strlen(huiwen);\
-      if(huiwen[k-1]=='\n') k=k-1;\
-      if(huiwen[k-1]=='\r') k=k-1;\  
+    {\
+    &emsp;int k=strlen(huiwen);\
+    &emsp;if(huiwen[k-1]=='\n') k=k-1;\
+    &emsp;if(huiwen[k-1]=='\r') k=k-1;\
     }\
 注意：\
 fgets()如果读到文件末尾直接返回NULL（数值0），而不是EOF（数值-1），所以循环条件里可以直接嵌入。\
@@ -182,18 +182,18 @@ fgets()要记得处理末尾的回车换行符
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    scanf("%d\n",&K);\
-    while (K--){\
-        char str[1005];\
-        fgets(str,sizeof(str), stdin); \
-        int len=strlen(str);\
-        for (int i=0;i<len;i++){\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    return 0;\
+ &emsp;int K;\
+ &emsp;scanf("%d\n",&K);\
+ &emsp;while (K--){\
+ &emsp;&emsp;char str[1005];\
+ &emsp;&emsp;fgets(str,sizeof(str), stdin); \
+ &emsp;&emsp;int len=strlen(str);\
+ &emsp;&emsp;for (int i=0;i<len;i++){\
+ &emsp;&emsp;&emsp;printf("%d ",str[i]);\
+  &emsp;&emsp;}\
+  &emsp;&emsp;printf("\n");\
+ &emsp;&emsp;}\
+ &emsp;return 0;\
 }\
 这样写，对于输入
 
@@ -216,18 +216,18 @@ fgets()读入了3个字符串，最后一个字符均为换行符'\n'（其ASCII
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    scanf("%d",&K);   //去掉了'\n'\
-    while (K--){\
-        char str[1005];\
-        fgets(str,sizeof(str), stdin); \
-        int len=strlen(str);\
-        for (int i=0;i<len;i++){\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    return 0;\
+&emsp;int K;\
+&emsp;scanf("%d",&K);   //去掉了'\n'\
+&emsp;while (K--){\
+&emsp;&emsp;char str[1005];\
+&emsp;&emsp;fgets(str,sizeof(str), stdin); \
+ &emsp;&emsp;int len=strlen(str);\
+ &emsp;&emsp;for (int i=0;i<len;i++){\
+ &emsp;&emsp;&emsp;printf("%d ",str[i]);\
+ &emsp;&emsp;}\
+ &emsp;printf("\n");\
+ &emsp;}\
+ &emsp;return 0;\
 }\
 其输出为：
 10 \
