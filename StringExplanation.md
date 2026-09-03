@@ -67,6 +67,7 @@ char name[] = "cat";
 C语言提供了多种方法来输入字符串，不同场景下应选择不同函数。
 
 1. scanf("%s", str);
+   
 特点：
 
 读入 一个单词（以空格、回车或制表符结束）；
@@ -102,21 +103,23 @@ Name: Zhang
 已在C11标准中废弃，不推荐使用。
 
 4. fgets(str, n, stdin);
+   
 特点：
 
 最多读取 n-1 个字符；
+
 会保留行尾的 \n；
+
 自动添加 \0。
+
 fgets() 不会自动跳过换行符。如果前面有残留的 \n，它会直接读到一个空行：
-char s[100];
-fgets(s, 100, stdin);
-printf("You entered: %s", s);
-输入：
-
-I love C language
-输出：
-
-You entered: I love C language
+char s[100];\
+fgets(s, 100, stdin);\
+printf("You entered: %s", s);\
+输入：\
+I love C language\
+输出：\
+You entered: I love C language\
 \0 不是数字0字符，而是 ASCII值为0的结束标志。
 
 六、OJ平台中字符串输入示例
