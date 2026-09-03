@@ -191,8 +191,8 @@ int main(){\
  &emsp;&emsp;for (int i=0;i<len;i++){\
  &emsp;&emsp;&emsp;printf("%d ",str[i]);\
   &emsp;&emsp;}\
-  &emsp;&emsp;printf("\n");\
- &emsp;&emsp;}\
+  &emsp;printf("\n");\
+ &emsp;}\
  &emsp;return 0;\
 }\
 这样写，对于输入
@@ -240,18 +240,18 @@ int main(){\
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    scanf("%d",&K);\
-    while (K--){\
-        char str[1005];\
-        scanf("%s",str);\
-        int len=strlen(str);\
-        for (int i=0;i<len;i++){\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    return 0;\
+&emsp;int K;\
+&emsp;scanf("%d",&K);\
+&emsp;while (K--){\
+&emsp;&emsp;char str[1005];\
+&emsp;&emsp;scanf("%s",str);\
+&emsp;&emsp;int len=strlen(str);\
+&emsp;&emsp;for (int i=0;i<len;i++){\
+&emsp;&emsp;&emsp;printf("%d ",str[i]);\
+&emsp;&emsp;}\
+ &emsp;printf("\n");\
+ &emsp;}\
+&emsp;return 0;\
 }\
 对于输入\
 3\
@@ -270,18 +270,18 @@ scanf()读入了3个字符串（即使scanf("%d",&K);中没有'\n'），换行�
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    scanf("%d",&K);    //这里没有'\n'\
-    while (K--){\
-        char str[1005];\
-        scanf("%s",str);\
-        int len=strlen(str);\
-        for (int i=0;i<len+1;i++){ //这里多加了1\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    return 0;\
+&emsp;int K;\
+&emsp;scanf("%d",&K);    //这里没有'\n'\
+&emsp;while (K--){\
+&emsp;&emsp;char str[1005];\
+&emsp;&emsp;scanf("%s",str);\
+&emsp;&emsp;int len=strlen(str);\
+&emsp;&emsp;for (int i=0;i<len+1;i++){ //这里多加了1\
+&emsp;&emsp;&emsp;printf("%d ",str[i]);\
+&emsp;&emsp;}\
+&emsp;printf("\n");\
+&emsp;}\
+&emsp;return 0;\
 }\
 其输出为：\
 97 98 99 0 \
@@ -294,18 +294,18 @@ int main(){\
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    scanf("%d",&K);\
-    while (K--){\
-        char str[1005];\
-        scanf("%s",str);\
-        int len=strlen(str);\
-        for (int i=0;i<len+4;i++){    //这里多加了4\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    return 0;\
+&emsp;int K;\
+&emsp;scanf("%d",&K);\
+&emsp;while (K--){\
+&emsp;&emsp;char str[1005];\
+&emsp;&emsp;scanf("%s",str);\
+&emsp;&emsp;int len=strlen(str);\
+&emsp;&emsp;for (int i=0;i<len+4;i++){    //这里多加了4\
+&emsp;&emsp;&emsp;printf("%d ",str[i]);\
+&emsp;&emsp;}\
+&emsp;printf("\n");\
+&emsp;}\
+&emsp;return 0;\
 }\
 对于输入：\
 3\
@@ -322,13 +322,13 @@ ccccccccccc\
 
 #include <stdio.h>\
 int main(){\
-    char c;\
-    while (1){\
-        c=getchar();\
-        printf("%d ",c);\
-        if(c==EOF) break;\
-    }\
-    return 0;\
+&emsp;char c;\
+&emsp;while (1){\
+&emsp;&emsp;c=getchar();\
+&emsp;&emsp;printf("%d ",c);\
+&emsp;&emsp;if(c==EOF) break;\
+&emsp;}\
+&emsp;return 0;\
 }\
 对于输入：\
 2 \
@@ -342,26 +342,26 @@ abc\
 #include <stdio.h>\
 #include <string.h>\
 int main(){\
-    int K;\
-    char c;\
-    scanf("%d\n",&K);\
-    while(K--){\
-        char str[3];\
-        fgets(str,sizeof(str), stdin);\
-        int len=strlen(str);\
-        printf("len:%d\n",len);\
-        for(int i=0;i<len;i++){\
-            printf("%d ",str[i]);\
-        }\
-        printf("\n");\
-    }\
-    printf("others:");\
-    while (1){\
-        c=getchar();\
-        printf("%d ",c);\
-        if(c==EOF) break;\
-    }\
-    return 0;\
+&emsp;int K;\
+&emsp;char c;\
+&emsp;scanf("%d\n",&K);\
+&emsp;while(K--){\
+&emsp;&emsp;char str[3];\
+&emsp;&emsp;fgets(str,sizeof(str), stdin);\
+&emsp;&emsp;int len=strlen(str);\
+&emsp;&emsp;printf("len:%d\n",len);\
+&emsp;&emsp;for(int i=0;i<len;i++){\
+&emsp;&emsp;&emsp;printf("%d ",str[i]);\
+&emsp;&emsp;}\
+&emsp;printf("\n");\
+&emsp;}\
+&emsp;printf("others:");\
+&emsp;while (1){\
+&emsp;&emsp;c=getchar();\
+&emsp;&emsp;printf("%d ",c);\
+&emsp;&emsp;if(c==EOF) break;\
+&emsp;}\
+&emsp;return 0;\
 }\
 对于输入：\
 4\
