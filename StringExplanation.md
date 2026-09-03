@@ -104,12 +104,9 @@ Name: Zhang
 
 4. fgets(str, n, stdin);
    
-特点：
-
-最多读取 n-1 个字符；
-
-会保留行尾的 \n；
-
+特点：\
+最多读取 n-1 个字符；\
+会保留行尾的 \n；\
 自动添加 \0。
 
 fgets() 不会自动跳过换行符。如果前面有残留的 \n，它会直接读到一个空行：
@@ -119,24 +116,23 @@ printf("You entered: %s", s);\
 输入：\
 I love C language\
 输出：\
-You entered: I love C language\
+You entered:\
+I love C language\
 \0 不是数字0字符，而是 ASCII值为0的结束标志。
 
 六、OJ平台中字符串输入示例
 
 OJ平台中可能有以下几种字符串输入方式
 
-1. 先给出行数，再逐行读入
+1. 先给出行数，再逐行读入\
 如： 字符串成对 这道题
 
-a.使用 scanf();
+a.使用 scanf();\
     scanf("%d",&K);
     while (K--){
         char str[1005];
         scanf("%s",str);
-        int len=strlen(str);
-        
-        
+        int len=strlen(str);   
     }
 适合于所输入的字符串中不包含空格的情况。
 
