@@ -120,7 +120,8 @@ a.使用 scanf();\
     while (K--){
      >   char str[1005];\
      >   scanf("%s",str);\
-     >   int len=strlen(str); \
+     >   int len=strlen(str);
+     
     }
     
 适合于所输入的字符串中不包含空格的情况。
