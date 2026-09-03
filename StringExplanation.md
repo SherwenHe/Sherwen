@@ -115,12 +115,12 @@ OJ平台中可能有以下几种字符串输入方式
 
 1. 先给出行数，再逐行读入\
 如： 字符串成对 这道题\
-a.使用 scanf();
+a.使用 scanf();\
     scanf("%d",&K);\
     while (K--){\
      >   char str[1005];\
      >   scanf("%s",str);\
-     >   int len=strlen(str); \
+     >   int len=strlen(str); 
     }
 适合于所输入的字符串中不包含空格的情况。
 
