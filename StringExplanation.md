@@ -138,7 +138,7 @@ b.使用 fgets();\
         for (int i=0;i<len;i++){\
             if(str[i] == '\n' || str[i] == '\r') break;\            
         }\
-    }\
+    }
     
 请注意：\
 fgets()不会跳过前面的'\n'等空白字符，所以scanf("%d\n",&K);的“%d”后面有一个“\n”，用于消化掉换行符。当然scanf("%d",&K)，后面加一个getchar()也可以。\
