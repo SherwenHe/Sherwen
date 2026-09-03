@@ -136,8 +136,8 @@ b.使用 fgets();\
         fgets(str,sizeof(str), stdin); \
         int len=strlen(str);\
         for (int i=0;i<len;i++){\
-            if(str[i] == '\n' || str[i] == '\r') break;\          
-        }\
+            if(str[i] == '\n' || str[i] == '\r') break;\
+            }\
     }
     
 请注意：\
