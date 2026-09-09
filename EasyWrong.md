@@ -138,6 +138,7 @@ sprintf(buf,"%s",data);
 int main() 
 
 {
+
 &emsp;&emsp;char str[5] = {'H', 'e', 'l', 'l', 'o'}; // 缺少 '\0'
 
 &emsp;&emsp;printf("%s\n", str);
@@ -156,6 +157,7 @@ int main()
 int main() 
 
 {
+
 &emsp;&emsp;char dest[5];
 
 &emsp;&emsp;strcpy(dest, "Hello, World!"); // 目标缓冲区太小
