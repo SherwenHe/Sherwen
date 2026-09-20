@@ -35,9 +35,9 @@ int main()
 
 
     // Calculating area and circumference of a circle
-    int r;
+    float r;
     printf("Enter the radius of the circle: \n");
-    scanf("%d",&r);
+    scanf("%f",&r);
     printf("The area of the circle is: %f\n",PI*r*r);
     printf("The circumference of the circle is: %f\n",2*PI*r);
 
