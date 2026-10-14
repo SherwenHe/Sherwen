@@ -1,6 +1,4 @@
-/*
- * 反转字符串的程序
- */
+/* 反转字符串的程序 */
 #include <stdio.h>
 #include <string.h>
 
