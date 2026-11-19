@@ -1,11 +1,12 @@
-/*快速排序是一种分治算法 ，通过选择一个基准值（pivot）将数组分为两部分：
-小于基准值的元素和大于基准值的元素。递归地对这两部分进行排序，最终完成整个数组的排序。*/
+/*Quick sort is a divide-and-conquer algorithm. It chooses a pivot value and divides
+the array into elements smaller than the pivot and elements greater than the pivot.
+It recursively sorts both parts until the entire array is sorted.*/
 
 #include <stdio.h>
 
 /**
- * @param arr 数组
- * @param n 数组元素个数
+ * @param arr Array
+ * @param n Number of elements in the array
  */
 
 void print_array(int arr[], int n)
@@ -19,9 +20,9 @@ void print_array(int arr[], int n)
 }
 
 /**
- * @param arr 待排序的数组
- * @param left 数组的左边界索引
- * @param right 数组的右边界索引
+ * @param arr Array to be sorted
+ * @param left Left boundary index of the array
+ * @param right Right boundary index of the array
  */
 
 void quick_sort(int arr[], int left, int right)
@@ -34,12 +35,12 @@ void quick_sort(int arr[], int left, int right)
 
     if (left >= right)
     {
-        return;  // 排序完成
+        return;  // Sorting is complete
     }
 
     while (i <= j)
     {
-        /* 把小于中间基准值的数放到数组左边, 把大于中间基准值的数放到数组右边  */
+        /* Place values smaller than the middle pivot on the left and values greater than the pivot on the right */
         while (arr[i] < p)
         {
             i++;
@@ -52,7 +53,7 @@ void quick_sort(int arr[], int left, int right)
 
         if (i <= j)
         {
-            /*交换数据，即小的放左边，大的放右边 */
+            /* Swap the values so that smaller values are on the left and larger values are on the right */
             temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
@@ -61,22 +62,28 @@ void quick_sort(int arr[], int left, int right)
         }
     } 
 
-    quick_sort(arr, left, p-1);
-    quick_sort(arr, p+1, right);
-    //print_array(&arr[left], right - left + 1); /* 打印数组，调试使用 */
+    //Hoare partition mehtod
+    quick_sort(arr, left, j);
+    quick_sort(arr, j + 1, right);
+
+    /* // or
+    quick_sort(arr, left, i-1);
+    quick_sort(arr, i, right);
+    */
+    print_array(&arr[left], right - left + 1); /* Print the array for debugging */
 }
 
 int main()
 {
-    int arr[] = {4, 3, 2, 1, 5, 6, 7, 8, 9, 10, 11, 89};
+    int arr[] = {40, 30, 20, 10, 50, 60, 70, 80, 90, 100, 110, 89};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    printf("old arr : ");
+    printf("Old arr : ");
     print_array(arr, n);
 
     quick_sort(arr, 0, n - 1);
 
-    printf("new arr : ");
+    printf("New arr : ");
     print_array(arr, n);
     return 0;
 }
